@@ -18,6 +18,11 @@ Linux: Install docker:
 ## Build the app
 3. docker build -t phpinfo .
 
+  #Explanation of the Dockerfile:
+  FROM php:7.2-apache (Pull docker image from docker hub using image name/tag php:7.2-apache).
+  COPY php.ini /usr/local/etc/php/ (Copy updated php.ini file to /usr/local/etc/php/).
+  COPY index.php /var/www/html/ (Copy index.php to apache docroot so phpinfo() function is displayed.
+
 ## Run the container
 4. docker run -d -p 80:80 phpinfo
 

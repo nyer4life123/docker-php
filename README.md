@@ -12,11 +12,11 @@ update php.ini to enable and set php error_log file
 Linux: Install docker:
 1. yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 2. yum install docker-ce
-3. Clone the repository
+3. clone the repository
 4. cd docker-php
 
 ## Build the app
-3. docker build -t phpinfo .
+1. docker build -t phpinfo .
 
   #Explanation of the Dockerfile:
   
@@ -27,7 +27,7 @@ Linux: Install docker:
   C. COPY index.php /var/www/html/ (Copy index.php to apache docroot so phpinfo() function is displayed.
 
 ## Run the container
-4. docker run -d -p 80:80 phpinfo
+1. docker run -d -p 80:80 phpinfo
 
 ## Verifying the container and website is up:
 1. curl http://localhost on the host where you ran the container

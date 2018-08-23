@@ -7,18 +7,17 @@ update php.ini to set sys_temp_dir to “/tmp/whateverfolderyouspecify”
 
 update php.ini to enable and set php error_log file
 
-## Installation:
+## Prerequisites
 
 Linux: Install docker:
 1. yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 2. yum install docker-ce
 3. clone the repository
-4. cd docker-php
 
-## Build the app
+## Installation / Build the app
 1. docker build -t phpinfo .
 
-  #Explanation of the Dockerfile:
+  Explanation of the Dockerfile:
   
   A. FROM php:7.2-apache (Pull docker image from docker hub using image name/tag php:7.2-apache).
   
